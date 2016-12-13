@@ -11,7 +11,7 @@ namespace Time2Angular2.Controllers
     {
         private static string[] Summaries = new[]
         {
-            "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
+            "Freezing", "Ice Cream Storage", "North Pole", "Cool for Polar Bears", "Mild Penguin Weather", "Warm in Siberia", "Permafrost Anyone?", "Snowman Weather"
         };
 
         [HttpGet("[action]")]
@@ -21,7 +21,7 @@ namespace Time2Angular2.Controllers
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {
                 DateFormatted = DateTime.Now.AddDays(index).ToString("d"),
-                TemperatureC = rng.Next(-20, 55),
+                TemperatureC = rng.Next(-30, 0),
                 Summary = Summaries[rng.Next(Summaries.Length)]
             });
         }

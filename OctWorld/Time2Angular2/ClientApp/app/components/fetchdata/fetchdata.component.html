@@ -1,6 +1,7 @@
 <h1>Weather forecast</h1>
 
-<p>This component demonstrates fetching data from the server.</p>
+<p>Just think, you could get weather from an API of your choosing.</p>
+
 
 <p *ngIf="!forecasts"><em>Loading...</em></p>
 
@@ -16,8 +17,8 @@
     <tbody>
         <tr *ngFor="let forecast of forecasts">
             <td>{{ forecast.dateFormatted }}</td>
-            <td>{{ forecast.temperatureC }}</td>
             <td>{{ forecast.temperatureF }}</td>
+            <td>{{ forecast.temperatureC }}</td>
             <td>{{ forecast.summary }}</td>
         </tr>
     </tbody>
